@@ -8,7 +8,7 @@ const Global = () => {
     <div className='container'>
     <div className='text-gray-900 text-2xl'>Needleman Wunsch Algorithm</div>
     <div>
-        <Needleman sequenceA={"ACG"} sequenceB={"ACC"} />
+        <Needleman sequenceA={"ACCAC"} sequenceB={"ACGAT"} />
     </div>
    </div>
    )

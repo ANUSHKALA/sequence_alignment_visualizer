@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import MatrixVisual from "../matrixVisual";
 import DisplayMatrix from "../displayMatrix";
 
-export default function Needleman({ sequenceA, sequenceB }) {
-  //Needleman Wunsch Visual
+export default function SmithWaterman({ sequenceA, sequenceB }) {
+  //Smith–Waterman algorithm
 
   const MATCH_SCORE = 1;
   const MISMATCH_SCORE = -1;
@@ -60,7 +60,7 @@ export default function Needleman({ sequenceA, sequenceB }) {
         const maxScore = Math.max(...scoreValues);
 
         newMatrix[i][j] = {
-          value: maxScore,
+          value: maxScore<=0 ? 0 : maxScore,
           arrow: scores.filter((score) => score.value === maxScore).map((score) => score.arrow),
         };
       }

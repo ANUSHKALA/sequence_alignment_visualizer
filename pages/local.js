@@ -1,19 +1,15 @@
 import React from 'react';
-import MatrixVisual from '../components/matrixVisual';
+import SmithWaterman from '../components/SmithWaterman';
 
 const Local = () => {
-    const matrix = [
-        [0, -1, -2, -3, -4],
-        [-1, 0, 0, 0, 0],
-        [-2, 0, 0, 0, 0],
-        [-3, 0, 0, 0, 0],
-        [-4, 0, 0, 0, 0]
-      ];
       
   return (
+    <div className='container'>
+    <div className='text-gray-900 text-2xl'>{'Smith–Waterman algorithm'}</div>
     <div>
-        <MatrixVisual matrix={matrix} />
+        <SmithWaterman sequenceA={"ACCAC"} sequenceB={"ACGAT"} />
     </div>
+   </div>
   )
 }
 
