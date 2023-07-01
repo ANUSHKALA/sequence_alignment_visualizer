@@ -38,12 +38,12 @@ const Matrix = ({ sequence1, sequence2 }) => {
         }
     }
     return (
-        <table>
-            <tbody>
+        <table className="rounded-2xl border-red-500 border">
+            <tbody className="rounded-2xl">
             {matrix.map((row, rowIndex) => (
                 <tr key={rowIndex}>
                     {row.map((cell, columnIndex) => (
-                        <td className="border border-black w-32 h-32" key={columnIndex}>
+                        <td className="border-2 border-gray-500 w-16 h-16" key={columnIndex}>
                             <div className="flex flex-wrap justify-center">
                                 {cell}
                             </div>

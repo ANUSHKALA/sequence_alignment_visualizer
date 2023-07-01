@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e48e2762-971d-4162-ac77-f45fc628b86a" name="Changes" comment="" />
+    <list default="true" id="e48e2762-971d-4162-ac77-f45fc628b86a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/input.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/input.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/matrix.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/matrix.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,8 +80,16 @@
       <workItem from="1687772588499" duration="1239000" />
       <workItem from="1688060919177" duration="155000" />
       <workItem from="1688061075112" duration="1879000" />
-      <workItem from="1688127014753" duration="3934000" />
+      <workItem from="1688127014753" duration="19165000" />
     </task>
+    <task id="LOCAL-00001" summary="matrix added">
+      <created>1688201399810</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688201399810</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,5 +108,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="matrix added" />
+    <option name="LAST_COMMIT_MESSAGE" value="matrix added" />
   </component>
 </project>
