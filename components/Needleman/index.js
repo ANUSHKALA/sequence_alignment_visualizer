@@ -28,7 +28,6 @@ export default function Needleman({ sequenceA, sequenceB }) {
       .fill(null)
       .map(() => Array(n + 1).fill({ value: 0, arrow: null }));
 
-    console.log("init:LL",matrix);
     for (let i = 1; i <= m; i++) {
       matrix[i][0] = { value: i * GAP_PENALTY, arrow: null };
     }
