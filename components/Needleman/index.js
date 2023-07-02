@@ -69,7 +69,7 @@ export default function Needleman({ sequenceA, sequenceB }) {
   };
 
   return (
-    <div>
+    <div className="">
       {matrix.length > 0 &&  (
         <>
         

@@ -1,5 +1,5 @@
 import React from "react";
-import { BsArrowUpShort, BsArrowRight, BsArrowUpLeft, BsArrowLeftShort } from "react-icons/bs";
+import {FiArrowUpLeft, FiArrowUp, FiArrowLeft} from "react-icons/fi";
 
 const DisplayMatrix = ({ matrix, sequence1, sequence2 }) => {
   const getColorFromScore = (score) => {
@@ -16,15 +16,15 @@ const DisplayMatrix = ({ matrix, sequence1, sequence2 }) => {
   sequence2 = [""].concat(sequence2);
 
   return (
-    <table>
+    <table className="mx-auto">
       <tbody>
         <th></th>
         {sequence1.map((letter, index) => {
-          return <th key={index}>{letter}</th>;
+          return <th key={index} className="py-1 text-xl">{letter}</th>;
         })}
         {matrix.map((row, rowIndex) => (
           <tr key={rowIndex}>
-            <th>{sequence2[rowIndex]}</th>
+            <th className="px-3 text-xl">{sequence2[rowIndex]}</th>
             {row.map((cell, cellIndex) => {
               const color = getColorFromScore(cell.value);
               return <DisplayCell key={cellIndex} cell={cell} color={color} />;
@@ -47,18 +47,18 @@ const DisplayCell = ({ cell, color }) => {
     let arrowIcon = null;
 
     switch (arrow) {
+      case "top":
+        arrowIcon = <FiArrowUp key={index} className="fill-black absolute top-0 left-1/3" size={22} />;
+        break;
       case "diagonal":
-        arrowIcon = <BsArrowUpLeft key={index} className="fill-black" />;
+        arrowIcon = <FiArrowUpLeft key={index} className="fill-black absolute top-0 left-0" size={22}/>;
         break;
       case "left":
-        arrowIcon = <BsArrowLeftShort key={index} className="fill-black" />;
-        break;
-      case "top":
-        arrowIcon = <BsArrowUpShort key={index} className="fill-black" />;
+        arrowIcon = <FiArrowLeft key={index} className="fill-black absolute top-1/3 left-0" size={22} />;
         break;
       case "none":
         arrowIcon = null;
-        break;
+        break; 
       default:
         arrowIcon = null;
     }
@@ -67,12 +67,11 @@ const DisplayCell = ({ cell, color }) => {
   });
 
   return (
-    <td style={{ backgroundColor: color }} className="h-20 w-20 text-center">
-      {arrowIcons}
-      <span className="">
-
+    <td style={{ backgroundColor: color }} className="relative h-20 w-20 text-center">
+      <span className="z-10">
       {cell.value}
       </span>
+      {arrowIcons}
     </td>
   );
 };
