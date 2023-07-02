@@ -1,17 +1,18 @@
 import React from "react";
 
 export default function SeqInput({value, placeholder="", onChange, label}) {
+    
   return (
     <div class="mb-6">
       <label
         htmlFor="success"
-        class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500"
+        className="block mb-2 text-sm font-medium text-green-700 dark:text-green-500"
       >
         {label}
       </label>
       <input
         type="text"
-        class="bg-slate-50 border py-3 px-2 min-w-full mx-2 rounded-xl border-blue-500 focus:border-blue-500 focus:ring-0"
+        className="bg-slate-50 border py-3 px-2 min-w-full mx-2 rounded-xl border-blue-500 focus:border-blue-500 focus:ring-0"
         placeholder={placeholder}
         value={value}
         onChange={onChange}

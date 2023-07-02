@@ -1,14 +1,8 @@
-import Head from 'next/head'
 import Link from 'next/link'
 
 export default function Home() {
   return (
     <div className={""}>
-      <Head>
-        <title>Sequence Alignment Visualization</title>
-        <meta name="description" content="" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
       <main className={"container mx-auto"}>
         <div className='my-10'>
