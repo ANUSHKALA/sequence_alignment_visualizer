@@ -4,7 +4,7 @@ export default function SeqInput({value, placeholder="", onChange, label}) {
   return (
     <div class="mb-6">
       <label
-        for="success"
+        htmlFor="success"
         class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500"
       >
         {label}

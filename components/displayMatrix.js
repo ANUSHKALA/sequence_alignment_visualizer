@@ -19,12 +19,12 @@ const DisplayMatrix = ({ matrix, sequence1, sequence2 }) => {
     <table className="mx-auto">
       <tbody>
         <th></th>
-        {sequence1.map((letter, index) => {
+        {sequence2.map((letter, index) => {
           return <th key={index} className="py-1 text-xl">{letter}</th>;
         })}
         {matrix.map((row, rowIndex) => (
           <tr key={rowIndex}>
-            <th className="px-3 text-xl">{sequence2[rowIndex]}</th>
+            <th className="px-3 text-xl">{sequence1[rowIndex]}</th>
             {row.map((cell, cellIndex) => {
               const color = getColorFromScore(cell.value);
               return <DisplayCell key={cellIndex} cell={cell} color={color} />;
