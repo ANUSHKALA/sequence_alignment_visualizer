@@ -1,14 +1,8 @@
-import Head from 'next/head'
 import Link from 'next/link'
 
 export default function Home() {
   return (
     <div className={""}>
-      <Head>
-        <title>Sequence Alignment Visualization</title>
-        <meta name="description" content="" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
         <div className=" h-screen bg-gray-900 flex items-center justify-center">
             <div className=" flex flex-wrap my-20 ">
