@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import MatrixVisual from "../matrixVisual";
 import DisplayMatrix from "../displayMatrix";
 
 export default function SmithWaterman({ sequenceA, sequenceB }) {

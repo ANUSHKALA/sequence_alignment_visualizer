@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className={""}>
 
-        <div className=" h-screen bg-gray-900 flex items-center justify-center">
+        <div className=" h-screen  bg-gray-900 flex items-center justify-center">
             <div className=" flex flex-wrap my-20 ">
                 <div className="text-justify">
                     <div className="text-center text-2xl capitalize px-auto p-10 pb-20">

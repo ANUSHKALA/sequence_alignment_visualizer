@@ -5,8 +5,8 @@ const DisplayMatrix = ({ matrix, sequence1, sequence2 }) => {
   const getColorFromScore = (score) => {
     const minScore = -10;
     const maxScore = 10;
-    const minHue = 0;
-    const maxHue = 120;
+    const minHue = 210;
+    const maxHue = 340;
     const normalizedScore = (score - minScore) / (maxScore - minScore);
     const hue = (1 - normalizedScore) * minHue + normalizedScore * maxHue;
     return `hsl(${hue}, 100%, 50%)`;
@@ -17,10 +17,11 @@ const DisplayMatrix = ({ matrix, sequence1, sequence2 }) => {
 
   return (
     <table className="mx-auto">
+
       <tbody>
         <th></th>
         {sequence2.map((letter, index) => {
-          return <th key={index} className="py-1 text-xl">{letter}</th>;
+          return <th key={index} className="py-1 text-xl uppercase">{letter}</th>;
         })}
         {matrix.map((row, rowIndex) => (
           <tr key={rowIndex}>
@@ -30,6 +31,7 @@ const DisplayMatrix = ({ matrix, sequence1, sequence2 }) => {
               return <DisplayCell key={cellIndex} cell={cell} color={color} />;
             })}
           </tr>
+
         ))}
       </tbody>
     </table>
