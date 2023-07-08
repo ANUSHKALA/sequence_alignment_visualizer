@@ -27,13 +27,12 @@ export default function SmithWaterman({ sequenceA, sequenceB }) {
       .fill(null)
       .map(() => Array(n + 1).fill({ value: 0, arrow: null }));
 
-    console.log("init:LL",matrix);
     for (let i = 1; i <= m; i++) {
-      matrix[i][0] = { value: i * GAP_PENALTY, arrow: null };
+      matrix[i][0] = { value: 0, arrow: null };
     }
 
     for (let j = 1; j <= n; j++) {
-      matrix[0][j] = { value: j * GAP_PENALTY, arrow: null };
+      matrix[0][j] = { value: 0, arrow: null };
     }
     return matrix;
   };
@@ -70,19 +69,14 @@ export default function SmithWaterman({ sequenceA, sequenceB }) {
   return (
     <div>
       {matrix.length > 0 &&  (
-        <>
+        <div>
         
         <DisplayMatrix
           matrix={matrix}
           sequence1={sequenceA.split('')}
           sequence2={sequenceB.split('')}
         />
-        {/* <MatrixVisual
-          matrix={matrix}
-          sequence1={sequenceA.split('')}
-          sequence2={sequenceB.split('')}
-        /> */}
-        </>
+        </div>
       )}
     </div>
   );

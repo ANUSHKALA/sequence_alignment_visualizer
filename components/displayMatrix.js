@@ -5,8 +5,8 @@ const DisplayMatrix = ({ matrix, sequence1, sequence2 }) => {
   const getColorFromScore = (score) => {
     const minScore = -10;
     const maxScore = 10;
-    const minHue = 210;
-    const maxHue = 340;
+    const minHue = 0;
+    const maxHue = 400;
     const normalizedScore = (score - minScore) / (maxScore - minScore);
     const hue = (1 - normalizedScore) * minHue + normalizedScore * maxHue;
     return `hsl(${hue}, 100%, 50%)`;
@@ -25,7 +25,7 @@ const DisplayMatrix = ({ matrix, sequence1, sequence2 }) => {
         })}
         {matrix.map((row, rowIndex) => (
           <tr key={rowIndex}>
-            <th className="px-3 text-xl">{sequence1[rowIndex]}</th>
+            <th className="px-3 text-xl uppercase">{sequence1[rowIndex]}</th>
             {row.map((cell, cellIndex) => {
               const color = getColorFromScore(cell.value);
               return <DisplayCell key={cellIndex} cell={cell} color={color} />;
@@ -69,7 +69,7 @@ const DisplayCell = ({ cell, color }) => {
   });
 
   return (
-    <td style={{ backgroundColor: color }} className="relative h-20 w-20 text-center">
+    <td style={{ backgroundColor: color }} className="relative h-20 w-20 text-center border border-black">
       <span className="z-10">
       {cell.value}
       </span>
