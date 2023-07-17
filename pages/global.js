@@ -59,7 +59,7 @@ const Global = () => {
                 <div className="grid">
                   <SeqInput
                     value={config.mismatch}
-                    placeholder="-1"parseInt
+                    placeholder="-1"
                     label={"Mismatch"}
                     type="number"
                     onChange={(e) => {

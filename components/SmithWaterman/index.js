@@ -6,9 +6,9 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
 
   const { match, mismatch, gap } = config;
 
-  const MATCH_SCORE = parseInt(match);
-  const MISMATCH_SCORE = parseInt(mismatch);
-  const GAP_PENALTY = parseInt(gap);
+  const MATCH_SCORE = match === "" ? 0 : parseInt(match);
+  const MISMATCH_SCORE = mismatch === "" ? 0 : parseInt(mismatch);
+  const GAP_PENALTY = gap === "" ? 0 : parseInt(gap);
 
   const [matrix, setMatrix] = useState([]);
   const [comparisonSeq, setComparisonSeq] = useState({
