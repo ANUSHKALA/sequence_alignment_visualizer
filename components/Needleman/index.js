@@ -32,7 +32,6 @@ export default function Needleman({ sequenceA, sequenceB, config }) {
       alignedSequenceA: alignedSequenceA,
       alignedSequenceB: alignedSequenceB,
     });
-    console.log("comparisonSeq", comparisonSeq);
   }, [sequenceA, sequenceB, config]);
 
   const initializeMatrix = (sequenceA, sequenceB) => {
@@ -106,8 +105,6 @@ export default function Needleman({ sequenceA, sequenceB, config }) {
             : MISMATCH_SCORE);
         const leftScore = newMatrix[i][j - 1].value + GAP_PENALTY;
         const topScore = newMatrix[i - 1][j].value + GAP_PENALTY;
-
-        // console.log(i,j,"diagonalScore",diagonalScore,"leftScore",leftScore,"topScore",topScore);
 
         const scores = [
           { value: diagonalScore, arrow: "diagonal" },

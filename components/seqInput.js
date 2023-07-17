@@ -3,7 +3,7 @@ import React from "react";
 export default function SeqInput({value, placeholder="", onChange, label, type="text"}) {
     
   return (
-    <div class="mb-2">
+    <div className="mb-2">
       <label
         htmlFor="success"
         className="text-sm font-medium text-green-700 dark:text-green-500"
