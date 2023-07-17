@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function SeqInput({value, placeholder="", onChange, label}) {
+export default function SeqInput({value, placeholder="", onChange, label, type="text"}) {
     
   return (
-    <div class="mb-2">
+    <div className="mb-2">
       <label
         htmlFor="success"
         className="text-sm font-medium text-green-700 dark:text-green-500"
@@ -11,7 +11,7 @@ export default function SeqInput({value, placeholder="", onChange, label}) {
         {label}
       </label>
       <input
-        type="text"
+        type={type}
         className="bg-slate-50 border py-3 px-2 min-w-full mx-2 uppercase border-blue-500 focus:border-blue-500 focus:ring-0"
         placeholder={placeholder}
         value={value}
