@@ -38,20 +38,20 @@ const Local = () => {
               </div>
               <div className="flex flex-wrap justify-center">
                 <SeqInput
-                  value={sequenceA}
-                  placeholder="Sequence 1"
-                  label={"Sequence 1"}
-                  onChange={(e) => {
-                    setSequenceA(e.target.value);
-                  }}
+                    value={sequenceA}
+                    placeholder="Sequence 1"
+                    label={"Sequence 1"}
+                    onChange={(e) => {
+                      setSequenceA(e.target.value);
+                    }}
                 />
                 <SeqInput
-                  value={sequenceB}
-                  placeholder="Sequence 2"
-                  label={"Sequence 2"}
-                  onChange={(e) => {
-                    setSequenceB(e.target.value);
-                  }}
+                    value={sequenceB}
+                    placeholder="Sequence 2"
+                    label={"Sequence 2"}
+                    onChange={(e) => {
+                      setSequenceB(e.target.value);
+                    }}
                 />
               </div>
             </div>
@@ -59,46 +59,46 @@ const Local = () => {
               <div className="grid row-span-1">
                 <div className="grid">
                   <SeqInput
-                    value={config.mismatch}
-                    placeholder="-1"
-                    parseInt
-                    label={"Mismatch"}
-                    type="number"
-                    onChange={(e) => {
-                      setConfig({
-                        ...config,
-                        mismatch: e.target.value,
-                      });
-                    }}
+                      value={config.mismatch}
+                      placeholder="-1"
+                      parseInt
+                      label={"Mismatch"}
+                      type="number"
+                      onChange={(e) => {
+                        setConfig({
+                          ...config,
+                          mismatch: e.target.value,
+                        });
+                      }}
                   />
                 </div>
                 <div className="">
                   <SeqInput
-                    value={config.match}
-                    placeholder="1"
-                    label={"Match"}
-                    type="number"
-                    onChange={(e) => {
-                      setConfig({
-                        ...config,
-                        match: e.target.value,
-                      });
-                    }}
+                      value={config.match}
+                      placeholder="1"
+                      label={"Match"}
+                      type="number"
+                      onChange={(e) => {
+                        setConfig({
+                          ...config,
+                          match: e.target.value,
+                        });
+                      }}
                   />
                 </div>
               </div>
               <div className="">
                 <SeqInput
-                  value={config.gap}
-                  placeholder="-1"
-                  type="number"
-                  label={"Gap"}
-                  onChange={(e) => {
-                    setConfig({
-                      ...config,
-                      gap: e.target.value,
-                    });
-                  }}
+                    value={config.gap}
+                    placeholder="-1"
+                    type="number"
+                    label={"Gap"}
+                    onChange={(e) => {
+                      setConfig({
+                        ...config,
+                        gap: e.target.value,
+                      });
+                    }}
                 />
               </div>
             </div>

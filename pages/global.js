@@ -14,7 +14,7 @@ const Global = () => {
   });
 
   return (
-    <div className="grid md:grid-cols-4 h-screen w-screen">
+    <div className="grid md:grid-cols-4 h-full w-screen">
       <div className="grid md:col-span-1 bg-amber-100">
         <div>
           <div className="mt-3 ml-4">
@@ -28,78 +28,80 @@ const Global = () => {
               />
             </Link>
           </div>
-          <div className="flex flex-wrap justify-center h-screen items-center">
-            <div>
+          <div className="h-screen px3">
+
               <div className="mx-10 p-2 my-5">
                 <div className="text-center font-bold text-3xl">
                   Needleman Wunsch Algorithm
                 </div>
               </div>
+
+
               <div className="flex flex-wrap justify-center">
                 <SeqInput
-                  value={sequenceA}
-                  placeholder="Sequence 1"
-                  label={"Sequence 1"}
-                  onChange={(e) => {
-                    setSequenceA(e.target.value);
-                  }}
+                    value={sequenceA}
+                    placeholder="Sequence 1"
+                    label={"Sequence 1"}
+                    onChange={(e) => {
+                      setSequenceA(e.target.value);
+                    }}
                 />
                 <SeqInput
-                  value={sequenceB}
-                  placeholder="Sequence 2"
-                  label={"Sequence 2"}
-                  onChange={(e) => {
-                    setSequenceB(e.target.value);
-                  }}
+                    value={sequenceB}
+                    placeholder="Sequence 2"
+                    label={"Sequence 2"}
+                    onChange={(e) => {
+                      setSequenceB(e.target.value);
+                    }}
                 />
               </div>
-            </div>
-            <div className="grid grid-rows-2">
-              <div className="grid row-span-1">
-                <div className="grid">
-                  <SeqInput
-                    value={config.mismatch}
-                    placeholder="-1"
-                    label={"Mismatch"}
-                    type="number"
-                    onChange={(e) => {
-                      setConfig({
-                        ...config,
-                        mismatch: e.target.value,
-                      });
-                    }}
-                  />
-                </div>
+
+
+              <div className="flex flex-wrap lg:justify-center md:justify-start justify-center mt-10">
                 <div className="">
                   <SeqInput
-                    value={config.match}
-                    placeholder="1"
-                    label={"Match"}
-                    type="number"
-                    onChange={(e) => {
-                      setConfig({
-                        ...config,
-                        match: e.target.value,
-                      });
-                    }}
+                      value={config.mismatch}
+                      placeholder="-1"
+                      label={"Mismatch"}
+                      type="number"
+                      onChange={(e) => {
+                        setConfig({
+                          ...config,
+                          mismatch: e.target.value,
+                        });
+                      }}
+                  />
+                </div>
+                <div >
+                  <SeqInput
+                      value={config.match}
+                      placeholder="1"
+                      label={"Match"}
+                      type="number"
+                      onChange={(e) => {
+                        setConfig({
+                          ...config,
+                          match: e.target.value,
+                        });
+                      }}
+                  />
+                </div>
+                <div>
+                  <SeqInput
+                      value={config.gap}
+                      placeholder="-1"
+                      type="number"
+                      label={"Gap"}
+                      onChange={(e) => {
+                        setConfig({
+                          ...config,
+                          gap: e.target.value,
+                        });
+                      }}
                   />
                 </div>
               </div>
-              <div className="">
-                <SeqInput
-                  value={config.gap}
-                  placeholder="-1"
-                  type="number"
-                  label={"Gap"}
-                  onChange={(e) => {
-                    setConfig({
-                        ...config,
-                        gap: e.target.value,
-                      });
-                  }}
-                />
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
