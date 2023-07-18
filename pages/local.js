@@ -42,6 +42,8 @@ const Local = () => {
                   placeholder="Sequence 1"
                   label={"Sequence 1"}
                   onChange={(e) => {
+                    if (e.target.value.length > 15) return;
+                    if (e.target.value.match(/[^ACGT]/g)) return;
                     setSequenceA(e.target.value);
                   }}
                 />
@@ -50,6 +52,8 @@ const Local = () => {
                   placeholder="Sequence 2"
                   label={"Sequence 2"}
                   onChange={(e) => {
+                    if (e.target.value.length > 15) return;
+                    if (e.target.value.match(/[^ACGT]/g)) return;
                     setSequenceB(e.target.value);
                   }}
                 />
