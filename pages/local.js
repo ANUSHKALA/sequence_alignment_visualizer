@@ -38,20 +38,24 @@ const Local = () => {
               </div>
               <div className="flex flex-wrap justify-center">
                 <SeqInput
-                    value={sequenceA}
-                    placeholder="Sequence 1"
-                    label={"Sequence 1"}
-                    onChange={(e) => {
-                      setSequenceA(e.target.value);
-                    }}
+                  value={sequenceA}
+                  placeholder="Sequence 1"
+                  label={"Sequence 1"}
+                  onChange={(e) => {
+                    if (e.target.value.length > 15) return;
+                    if (e.target.value.match(/[^ACGT]/g)) return;
+                    setSequenceA(e.target.value);
+                  }}
                 />
                 <SeqInput
-                    value={sequenceB}
-                    placeholder="Sequence 2"
-                    label={"Sequence 2"}
-                    onChange={(e) => {
-                      setSequenceB(e.target.value);
-                    }}
+                  value={sequenceB}
+                  placeholder="Sequence 2"
+                  label={"Sequence 2"}
+                  onChange={(e) => {
+                    if (e.target.value.length > 15) return;
+                    if (e.target.value.match(/[^ACGT]/g)) return;
+                    setSequenceB(e.target.value);
+                  }}
                 />
               </div>
             </div>
@@ -59,17 +63,17 @@ const Local = () => {
               <div className="grid row-span-1">
                 <div className="grid">
                   <SeqInput
-                      value={config.mismatch}
-                      placeholder="-1"
-                      parseInt
-                      label={"Mismatch"}
-                      type="number"
-                      onChange={(e) => {
-                        setConfig({
-                          ...config,
-                          mismatch: e.target.value,
-                        });
-                      }}
+                    value={config.mismatch}
+                    placeholder="-1"
+                    parseInt
+                    label={"Mismatch"}
+                    type="number"
+                    onChange={(e) => {
+                      setConfig({
+                        ...config,
+                        mismatch: e.target.value,
+                      });
+                    }}
                   />
                 </div>
                 <div className="">

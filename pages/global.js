@@ -35,24 +35,26 @@ const Global = () => {
                   Needleman Wunsch Algorithm
                 </div>
               </div>
-
-
               <div className="flex flex-wrap justify-center">
                 <SeqInput
-                    value={sequenceA}
-                    placeholder="Sequence 1"
-                    label={"Sequence 1"}
-                    onChange={(e) => {
-                      setSequenceA(e.target.value);
-                    }}
+                  value={sequenceA}
+                  placeholder="Sequence 1"
+                  label={"Sequence 1"}
+                  onChange={(e) => {
+                    if (e.target.value.length > 15) return;
+                    if (e.target.value.match(/[^ACGT]/g)) return;
+                    setSequenceA(e.target.value);
+                  }}
                 />
                 <SeqInput
-                    value={sequenceB}
-                    placeholder="Sequence 2"
-                    label={"Sequence 2"}
-                    onChange={(e) => {
-                      setSequenceB(e.target.value);
-                    }}
+                  value={sequenceB}
+                  placeholder="Sequence 2"
+                  label={"Sequence 2"}
+                  onChange={(e) => {
+                    if (e.target.value.length > 15) return;
+                    if (e.target.value.match(/[^ACGT]/g)) return;
+                    setSequenceB(e.target.value);
+                  }}
                 />
               </div>
 
@@ -72,7 +74,7 @@ const Global = () => {
                       }}
                   />
                 </div>
-                <div >
+                <div className="">
                   <SeqInput
                       value={config.match}
                       placeholder="1"
