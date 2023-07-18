@@ -28,7 +28,7 @@ const Global = () => {
               />
             </Link>
           </div>
-          <div className="h-screen px3">
+          <div className="h-screen">
 
               <div className="mx-10 p-2 my-5">
                 <div className="text-center font-bold text-3xl">

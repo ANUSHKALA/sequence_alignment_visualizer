@@ -139,21 +139,25 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
           />
         </div>
       )}
-      <div className="">
-        <h3>Sequence Comparison</h3>
-        <div>
-          {comparisonSeq.alignedSequenceA.split("").map((char, index) => (
-            <span key={index} className="px-1">
-              {char}
-            </span>
-          ))}
+      <div className="flex justify-center mt-16 text-lg">
+        <div className="flex justify-center items-center p-5">
+          <h3 className="">Sequence Comparison</h3>
         </div>
-        <div>
-          {comparisonSeq.alignedSequenceB.split("").map((char, index) => (
-            <span key={index} className="px-1">
+        <div className="p-5 border border-black border-l-4 border-r-0 border-t-0 border-b-0">
+          <div className="">
+            {comparisonSeq.alignedSequenceA.split("").map((char, index) => (
+                <span key={index} className="px-1">
               {char}
             </span>
-          ))}
+            ))}
+          </div>
+          <div>
+            {comparisonSeq.alignedSequenceB.split("").map((char, index) => (
+                <span key={index} className="px-1">
+              {char}
+            </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>
