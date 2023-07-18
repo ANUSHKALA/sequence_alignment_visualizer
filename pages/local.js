@@ -16,7 +16,7 @@ const Local = () => {
 
   return (
     <div className="grid md:grid-cols-4 h-screen w-screen">
-      <div className="grid md:col-span-1 bg-amber-100">
+      <div className="grid md:col-span-1 bg-gradient-to-b from-rose-200 via-orange-100 to-amber-200">
         <div>
           <div className="mt-3 ml-4">
             <Link href="/">
@@ -110,7 +110,7 @@ const Local = () => {
           </div>
         </div>
       </div>
-      <div className="grid md:col-span-3 bg-white h-screen ">
+      <div className="grid md:col-span-3 bg-white h-full bg-gradient-to-tr from-stone-500 via-gray-300 to-stone-500">
         <div className="flex flex-wrap justify-center items-center mx-5 my-10">
           <SmithWaterman
             sequenceA={sequenceA}
