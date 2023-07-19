@@ -61,13 +61,8 @@ const Global = () => {
         return;
       }
   
-      // Assuming you want to work with the first two sequences in the file
       const sequenceA = sequences[0];
       const sequenceB = sequences[1];
-  
-      // You can now use sequenceA and sequenceB for further processing or display
-      console.log("Sequence A:", sequenceA);
-      console.log("Sequence B:", sequenceB);
 
       setSequenceA(sequenceA);
       setSequenceB(sequenceB);
