@@ -106,7 +106,6 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
         const leftScore = newMatrix[i][j - 1].value + GAP_PENALTY;
         const topScore = newMatrix[i - 1][j].value + GAP_PENALTY;
 
-        // console.log(i,j,"diagonalScore",diagonalScore,"leftScore",leftScore,"topScore",topScore);
 
         const scores = [
           { value: diagonalScore, arrow: "diagonal" },
