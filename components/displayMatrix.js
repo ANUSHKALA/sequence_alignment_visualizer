@@ -5,6 +5,7 @@ const DisplayMatrix = ({ matrix, sequence1, sequence2 }) => {
   const [display, setDisplay] = useState(true);
 
   useEffect(() => {
+    setDisplay(true);
     console.log("Matrix: ", matrix);
     if (sequence1.length > 17 || sequence2.length > 17) {
       setDisplay(false);

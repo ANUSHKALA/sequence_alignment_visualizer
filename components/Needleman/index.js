@@ -137,6 +137,7 @@ export default function Needleman({ sequenceA, sequenceB, config }) {
           className={`flex flex-col px-2 py-1 rounded-md ${
             isSame ? "bg-green-300/40 " : ""
           }`}
+          key={i}
         >
           <span>{seqA[i]}</span>
           <span>{seqB[i]}</span>
