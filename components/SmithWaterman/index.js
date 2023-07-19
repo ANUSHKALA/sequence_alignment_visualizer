@@ -128,6 +128,27 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
     return newMatrix;
   };
 
+  const seqAlign = (seqA, seqB) => {
+    const m = seqA.length;
+    const n = seqB.length;
+    var alignChar = [];
+    for (let i = 0; i < m; i++) {
+      const isSame = seqA[i] === seqB[i];
+      const aligncell = (
+        <div
+          className={`flex flex-col px-2 py-1 rounded-md ${
+            isSame ? "bg-green-300/40 " : ""
+          }`}
+        >
+          <span>{seqA[i]}</span>
+          <span>{seqB[i]}</span>
+        </div>
+      );
+      alignChar.push(aligncell);
+    }
+    return <div className="flex flex-row">{...alignChar}</div>;
+  };
+
   return (
     <div>
       {matrix.length > 0 && (
@@ -144,20 +165,10 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
           <h3 className="">Sequence Comparison</h3>
         </div>
         <div className="p-5 border border-black border-l-4 border-r-0 border-t-0 border-b-0">
-          <div className="">
-            {comparisonSeq.alignedSequenceA.split("").map((char, index) => (
-                <span key={index} className="px-1">
-              {char}
-            </span>
-            ))}
-          </div>
-          <div>
-            {comparisonSeq.alignedSequenceB.split("").map((char, index) => (
-                <span key={index} className="px-1">
-              {char}
-            </span>
-            ))}
-          </div>
+          {seqAlign(
+            comparisonSeq.alignedSequenceA,
+            comparisonSeq.alignedSequenceB
+          )}
         </div>
       </div>
     </div>

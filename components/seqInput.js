@@ -3,10 +3,10 @@ import React from "react";
 export default function SeqInput({value, placeholder="", onChange, label, type="text", className}) {
     
   return (
-    <div className="mb-2 mx-5">
+    <div className="mb-4 mx-5">
       <label
         htmlFor="success"
-        className="absolute pb-5 text-sm font-medium text-green-700 dark:text-green-500"
+        className="absolute pb-6 text-base px-2 font-medium text-green-700 dark:text-green-500"
       >
         {label}
       </label>

@@ -16,13 +16,13 @@ export default function Home() {
                 className="mx-auto text-center mb-6 md:w-96 px-4 py-4 w-64  font-bold border-b-4 border-gray-700 hover:border-gray-900 "
                 href="/global"
               >
-                <h3 className="text-2xl hover:text-3xl text-gray-700">Global Alignment</h3>
+                <h3 className="text-3xl hover:scale-110 text-gray-700">Global Alignment</h3>
               </Link>
               <Link
                 className="mx-auto text-center mb-6 md:w-96 px-4 py-4 w-64 font-bold border-b-4 border-gray-700 hover:border-gray-900 "
                 href="/local"
               >
-                <h3 className="text-2xl hover:text-3xl text-gray-700">Local Alignment</h3>
+                <h3 className="text-3xl hover:scale-110 text-gray-700">Local Alignment</h3>
               </Link>
             </div>
           </div>
