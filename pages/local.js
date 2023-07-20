@@ -74,7 +74,7 @@ const Local = () => {
 
   return (
     <div className="grid md:grid-cols-4 h-screen w-screen">
-      <div className="grid md:col-span-1 bg-gradient-to-b from-rose-200 via-orange-100 to-amber-200">
+      <div className="grid md:col-span-1 bg-emerald-600">
         <div>
           <div className="mt-3 ml-4">
             <Link href="/">
@@ -95,15 +95,16 @@ const Local = () => {
                 </div>
               </div>
               <div className="flex flex-wrap justify-center">
-              <select
-                value={inputMode}
-                onChange={handleDropdownChange}
-                className="p-2 border rounded-md"
-              >
-                <option value={0}>User Input</option>
-                <option value={1}>FASTA File</option>
-              </select>
-
+                  <div className="flex flex-wrap justify-center min-w-full">
+                      <select
+                          value={inputMode}
+                          onChange={handleDropdownChange}
+                          className="block w-3/5 px-2 mb-12 py-3 text-base text-gray-900 border border-gray-300  bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      >
+                          <option value={0}>User Input</option>
+                          <option value={1}>FASTA File</option>
+                      </select>
+                  </div>
               {inputMode === 0 ||inputMode === "0" ? (
                 <>
                   <SeqInput
@@ -112,7 +113,7 @@ const Local = () => {
                     label={"Sequence 1"}
                     onChange={(e) => {
                       if (e.target.value.length > 15) return;
-                      if (e.target.value.match(/[^ACGT]/g)) return;
+                      // if (e.target.value.match(/[^ACGT]/g)) return;
                       setSequenceA(e.target.value);
                     }}
                   />
@@ -122,7 +123,7 @@ const Local = () => {
                     label={"Sequence 2"}
                     onChange={(e) => {
                       if (e.target.value.length > 15) return;
-                      if (e.target.value.match(/[^ACGT]/g)) return;
+                      // if (e.target.value.match(/[^ACGT]/g)) return;
                       setSequenceB(e.target.value);
                     }}
                   />
@@ -189,8 +190,8 @@ const Local = () => {
           </div>
         </div>
       </div>
-      <div className="grid md:col-span-3 bg-white h-full bg-gradient-to-tr from-stone-500 via-gray-300 to-stone-500">
-        <div className="flex flex-wrap justify-center items-center mx-5 my-10">
+      <div className="grid md:col-span-3 bg-slate-800 h-full">
+        <div className="flex flex-wrap justify-center items-center uppercase mx-5 my-10">
           <SmithWaterman
             sequenceA={sequenceA}
             sequenceB={sequenceB}

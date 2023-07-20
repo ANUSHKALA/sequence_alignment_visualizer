@@ -33,14 +33,14 @@ const DisplayMatrix = ({ matrix, sequence1, sequence2 }) => {
             <th></th>
             {sequence2.map((letter, index) => {
               return (
-                <th key={index} className="py-1 text-xl uppercase">
+                <th key={index} className="py-1 text-xl invert uppercase">
                   {letter}
                 </th>
               );
             })}
             {matrix.map((row, rowIndex) => (
               <tr key={rowIndex}>
-                <th className="px-3 text-xl uppercase">
+                <th className="px-3 text-xl invert uppercase">
                   {sequence1[rowIndex]}
                 </th>
                 {row.map((cell, cellIndex) => {

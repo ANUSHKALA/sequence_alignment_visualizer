@@ -5,8 +5,7 @@ export default function SeqInput({value, placeholder="", onChange, label, type="
   return (
     <div className="mb-4 mx-5">
       <label
-        htmlFor="success"
-        className="absolute pb-6 text-base px-2 font-medium text-green-700 dark:text-green-500"
+        className="absolute pb-6 text-base px-2 font-medium text-emerald-900"
       >
         {label}
       </label>
@@ -14,7 +13,7 @@ export default function SeqInput({value, placeholder="", onChange, label, type="
         type={type}
         className={className?
             className:
-            "mt-5 bg-slate-50 border py-3 px-2  min-w-full mx-2 uppercase border-blue-500 focus:border-blue-500 focus:ring-0"}
+            "mt-5 bg-slate-50 border py-3 px-2  min-w-full mx-2 uppercase border border-emerald-800"}
         placeholder={placeholder}
         value={value}
         onChange={onChange}

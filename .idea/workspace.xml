@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e48e2762-971d-4162-ac77-f45fc628b86a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dna.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Needleman/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Needleman/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SmithWaterman/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/SmithWaterman/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/displayMatrix.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/displayMatrix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/fastaInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/fastaInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/seqInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/seqInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/local.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/local.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2RjXyhq3tC2Y4KoU1k2q9NMVXFq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/anushka/Desktop/S4/bio/sequence_alignment_visualizer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/home/anushka/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/222.3739.57/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/styles" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="Unnamed" type="NodeWebKit" factoryName="NW.js" nameIsGenerated="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="NW.js.Unnamed" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e48e2762-971d-4162-ac77-f45fc628b86a" name="Changes" comment="" />
+      <created>1687764719312</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687764719312</updated>
+      <workItem from="1687764720475" duration="1941000" />
+      <workItem from="1687772588499" duration="1239000" />
+      <workItem from="1688060919177" duration="155000" />
+      <workItem from="1688061075112" duration="1879000" />
+      <workItem from="1688127014753" duration="19165000" />
+      <workItem from="1689858766095" duration="8570000" />
+    </task>
+    <task id="LOCAL-00001" summary="matrix added">
+      <created>1688201399810</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688201399810</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ui fixes">
+      <created>1689710834563</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689710834563</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ui fixes">
+      <created>1689712065083</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689712065083</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ui fixes">
+      <created>1689712666966</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689712666966</updated>
+    </task>
+    <task id="LOCAL-00005" summary="bg">
+      <created>1689713325004</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689713325004</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="matrix added" />
+    <MESSAGE value="ui fixes" />
+    <MESSAGE value="bg" />
+    <option name="LAST_COMMIT_MESSAGE" value="bg" />
+  </component>
+</project>

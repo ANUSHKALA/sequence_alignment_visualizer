@@ -159,7 +159,7 @@ export default function Needleman({ sequenceA, sequenceB, config }) {
           />
         </>
       )}
-      <div className="flex justify-center mt-16 text-lg">
+      <div className="flex justify-center mt-16 text-lg invert">
         <div className="flex justify-center items-center p-5">
           <h3 className="">Sequence Comparison</h3>
         </div>

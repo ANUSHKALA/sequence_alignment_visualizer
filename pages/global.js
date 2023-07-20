@@ -23,7 +23,7 @@ const Global = () => {
     const lines = fileContent.split(/\r?\n/);
     const sequences = [];
     let currentSequence = "";
-  
+
     for (const line of lines) {
       if (line.startsWith(">")) {
         if (currentSequence) {
@@ -34,47 +34,47 @@ const Global = () => {
         currentSequence += line.trim();
       }
     }
-  
+
     if (currentSequence) {
       sequences.push(currentSequence);
     }
-  
+
     return sequences;
   }
 
   function handleFileUpload(event) {
     const file = event.target.files[0];
-  
+
     if (!file) {
       alert("No file selected.");
       return;
     }
-  
+
     const reader = new FileReader();
-  
+
     reader.onload = (e) => {
       const fileContent = e.target.result;
       const sequences = parseFastaFile(fileContent);
-  
+
       if (sequences.length < 2) {
         alert("The FASTA file should contain at least two sequences.");
         return;
       }
-  
+
       const sequenceA = sequences[0];
       const sequenceB = sequences[1];
 
       setSequenceA(sequenceA);
       setSequenceB(sequenceB);
     };
-  
+
     reader.readAsText(file);
   }
-  
+
 
   return (
     <div className="grid md:grid-cols-4 h-full w-screen">
-      <div className="grid md:col-span-1 bg-gradient-to-b from-rose-200 via-orange-100 to-amber-200">
+      <div className="grid md:col-span-1 bg-emerald-600">
         <div>
           <div className="mt-3 ml-4">
             <Link href="/">
@@ -94,16 +94,17 @@ const Global = () => {
               </div>
             </div>
             <div className="flex flex-wrap justify-center">
-              <select
-                value={inputMode}
-                onChange={handleDropdownChange}
-                className="p-2 border rounded-md"
-              >
-                <option value={0}>User Input</option>
-                <option value={1}>FASTA File</option>
-              </select>
-
-              {inputMode === 0 ||inputMode === "0" ? (
+              <div className="flex flex-wrap justify-center min-w-full">
+                <select
+                    value={inputMode}
+                    onChange={handleDropdownChange}
+                    className="block w-3/5 px-2 mb-12 py-3 text-base text-gray-900 border border-gray-300  bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                >
+                  <option value={0}>User Input</option>
+                  <option value={1}>FASTA File</option>
+                </select>
+              </div>
+              {inputMode === 0 || inputMode === "0" ? (
                 <>
                   <SeqInput
                     value={sequenceA}
@@ -111,7 +112,7 @@ const Global = () => {
                     label={"Sequence 1"}
                     onChange={(e) => {
                       if (e.target.value.length > 15) return;
-                      if (e.target.value.match(/[^ACGT]/g)) return;
+                      // if (e.target.value.match(/[^ACGT]/g)) return;
                       setSequenceA(e.target.value);
                     }}
                   />
@@ -121,7 +122,7 @@ const Global = () => {
                     label={"Sequence 2"}
                     onChange={(e) => {
                       if (e.target.value.length > 15) return;
-                      if (e.target.value.match(/[^ACGT]/g)) return;
+                      // if (e.target.value.match(/[^ACGT]/g)) return;
                       setSequenceB(e.target.value);
                     }}
                   />
@@ -184,8 +185,8 @@ const Global = () => {
           </div>
         </div>
       </div>
-      <div className="grid md:col-span-3 bg-white h-full bg-gradient-to-t from-stone-500 via-gray-300 to-stone-500">
-        <div className="flex flex-wrap justify-center items-center mx-5 my-10">
+      <div className="grid md:col-span-3 bg-slate-800 h-full">
+        <div className="flex flex-wrap justify-center items-center uppercase mx-5 my-10">
           <Needleman
             sequenceA={sequenceA}
             sequenceB={sequenceB}
