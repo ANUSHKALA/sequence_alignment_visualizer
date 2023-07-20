@@ -135,8 +135,8 @@ export default function Needleman({ sequenceA, sequenceB, config }) {
       const isSame = seqA[i] === seqB[i];
       const aligncell = (
         <div
-          className={`flex flex-col px-2 py-1 rounded-md ${
-            isSame ? "bg-green-300/40 " : ""
+          className={`flex flex-col px-2 py-1 rounded-md mx-0.5 ${
+            isSame ? "bg-red-400/90" : ""
           }`}
           key={i}
         >

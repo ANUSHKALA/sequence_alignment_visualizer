@@ -13,10 +13,10 @@ const DisplayMatrix = ({ matrix, sequence1, sequence2 }) => {
   }, [matrix, sequence1, sequence2]);
 
   const getColorFromScore = (score) => {
-    const minScore = -10;
-    const maxScore = 10;
+    const minScore = -25;
+    const maxScore = 25;
     const minHue = 0;
-    const maxHue = 400;
+    const maxHue = 900;
     const normalizedScore = (score - minScore) / (maxScore - minScore);
     const hue = (1 - normalizedScore) * minHue + normalizedScore * maxHue;
     return `hsl(${hue}, 100%, 50%)`;
