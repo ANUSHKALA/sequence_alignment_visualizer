@@ -32,6 +32,7 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
       alignedSequenceA: alignedSequenceA,
       alignedSequenceB: alignedSequenceB,
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sequenceA, sequenceB, config]);
 
   const initializeMatrix = (sequenceA, sequenceB) => {
