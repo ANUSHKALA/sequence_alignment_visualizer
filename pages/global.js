@@ -90,7 +90,7 @@ const Global = () => {
           <div className="h-screen">
             <div className="mx-10 p-2 my-5">
               <div className="text-center font-bold text-3xl">
-                Needleman Wunsch Algorithm
+                Needleman-Wunsch Algorithm
               </div>
             </div>
             <div className="flex flex-wrap justify-center">
