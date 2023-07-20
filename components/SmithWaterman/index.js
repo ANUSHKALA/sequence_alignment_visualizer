@@ -57,13 +57,13 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
     const numRows = matrix.length;
     const numCols = matrix[0].length;
     let maxScore = -Infinity;
-    let maxI = 0;
-    let maxJ = 0;
-  
-    for (let i = 0; i < numRows; i++) {
-      for (let j = 0; j < numCols; j++) {
-        if (matrix[i][j].score > maxScore) {
-          maxScore = matrix[i][j].score;
+    let maxI = numRows - 1;
+    let maxJ = numCols - 1;
+    
+    for (let i = numRows - 1; i >= 0; i--) {
+      for (let j = numCols - 1; j >= 0; j--) {
+        if (matrix[i][j].value > maxScore) {
+          maxScore = matrix[i][j].value;
           maxI = i;
           maxJ = j;
         }
@@ -75,10 +75,10 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
     let alignedSequenceA = "";
     let alignedSequenceB = "";
   
-    while (i > 0 && j > 0 && matrix[i][j].score > 0) {
+    while (i > 0 && j > 0 && matrix[i][j].value >= 0) {
       const currentCell = matrix[i][j];
       const currentArrow = currentCell.arrow[0];
-  
+
       if (currentArrow === "diagonal") {
         alignedSequenceA = sequenceA[i - 1] + alignedSequenceA;
         alignedSequenceB = sequenceB[j - 1] + alignedSequenceB;
@@ -94,7 +94,7 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
         i--;
       }
     }
-  
+
     return { alignedSequenceA, alignedSequenceB };
   };
   
@@ -137,19 +137,39 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
     const m = seqA.length;
     const n = seqB.length;
     var alignChar = [];
-    for (let i = 0; i < m; i++) {
-      const isSame = seqA[i] === seqB[i];
-      const aligncell = (
-        <div
-          className={`flex flex-col px-2 py-1 rounded-md mx-0.5 ${
-            isSame ? "bg-red-400/90"  : ""
-          }`}
-        >
-          <span>{seqA[i]}</span>
-          <span>{seqB[i]}</span>
-        </div>
-      );
-      alignChar.push(aligncell);
+    var firstFound = false
+    for (let i=0; i<m; i++){
+      if (seqA[i] === seqB[i] && firstFound === false){
+        firstFound = true
+        alignChar.push(
+          <div
+            className={`flex flex-col px-2 py-1 rounded-md mx-0.5 bg-red-400/90`}
+          >
+            <span>{seqA[i]}</span>
+            <span>{seqB[i]}</span>
+          </div>
+        );
+      }
+      else if (seqA[i] === seqB[i] && firstFound === true){
+        alignChar.push(
+          <div
+            className={`flex flex-col px-2 py-1 rounded-md mx-0.5 bg-red-400/90`}
+          >
+            <span>{seqA[i]}</span>
+            <span>{seqB[i]}</span>
+          </div>
+        );
+      }
+      else if (seqA[i] !== seqB[i] && firstFound === true){
+        alignChar.push(
+          <div
+            className={`flex flex-col px-2 py-1 rounded-md mx-0.5 `}
+          >
+            <span>{seqA[i]}</span>
+            <span>{seqB[i]}</span>
+          </div>
+        );
+      }
     }
     return <div className="flex flex-row">{...alignChar}</div>;
   };
