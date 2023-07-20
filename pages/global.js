@@ -74,7 +74,7 @@ const Global = () => {
 
   return (
     <div className="grid md:grid-cols-4 h-full w-screen">
-      <div className="grid md:col-span-1 bg-emerald-600">
+      <div className="grid md:col-span-1 bg-emerald-500">
         <div>
           <div className="mt-3 ml-4">
             <Link href="/">

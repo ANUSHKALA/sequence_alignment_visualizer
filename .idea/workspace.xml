@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e48e2762-971d-4162-ac77-f45fc628b86a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/components/Needleman/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Needleman/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SmithWaterman/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/SmithWaterman/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/global.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/local.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/local.js" afterDir="false" />
     </list>
@@ -80,7 +79,7 @@
       <workItem from="1688060919177" duration="155000" />
       <workItem from="1688061075112" duration="1879000" />
       <workItem from="1688127014753" duration="19165000" />
-      <workItem from="1689858766095" duration="8949000" />
+      <workItem from="1689858766095" duration="10762000" />
     </task>
     <task id="LOCAL-00001" summary="matrix added">
       <created>1688201399810</created>
@@ -124,7 +123,28 @@
       <option name="project" value="LOCAL" />
       <updated>1689876902664</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="uppercase">
+      <created>1689877054069</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689877054069</updated>
+    </task>
+    <task id="LOCAL-00008" summary="dna.svg">
+      <created>1689877742839</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689877742839</updated>
+    </task>
+    <task id="LOCAL-00009" summary="small changes">
+      <created>1689878218447</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689878218447</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +167,9 @@
     <MESSAGE value="ui fixes" />
     <MESSAGE value="bg" />
     <MESSAGE value="ui changes and some minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui changes and some minor fixes" />
+    <MESSAGE value="uppercase" />
+    <MESSAGE value="dna.svg" />
+    <MESSAGE value="small changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
   </component>
 </project>
