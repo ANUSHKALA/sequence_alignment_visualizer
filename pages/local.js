@@ -191,7 +191,7 @@ const Local = () => {
         </div>
       </div>
       <div className="grid md:col-span-3 bg-slate-800 h-full">
-        <div className="flex flex-wrap justify-center items-center uppercase mx-5 my-10">
+        <div className="flex flex-wrap justify-center items-center mx-5 my-10">
           <SmithWaterman
             sequenceA={sequenceA}
             sequenceB={sequenceB}

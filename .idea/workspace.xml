@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e48e2762-971d-4162-ac77-f45fc628b86a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dna.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Needleman/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Needleman/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/SmithWaterman/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/SmithWaterman/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/displayMatrix.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/displayMatrix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/fastaInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/fastaInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/seqInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/seqInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/local.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/local.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +80,7 @@
       <workItem from="1688060919177" duration="155000" />
       <workItem from="1688061075112" duration="1879000" />
       <workItem from="1688127014753" duration="19165000" />
-      <workItem from="1689858766095" duration="8570000" />
+      <workItem from="1689858766095" duration="8949000" />
     </task>
     <task id="LOCAL-00001" summary="matrix added">
       <created>1688201399810</created>
@@ -123,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689713325004</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ui changes and some minor fixes">
+      <created>1689876902664</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689876902664</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +146,7 @@
     <MESSAGE value="matrix added" />
     <MESSAGE value="ui fixes" />
     <MESSAGE value="bg" />
-    <option name="LAST_COMMIT_MESSAGE" value="bg" />
+    <MESSAGE value="ui changes and some minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui changes and some minor fixes" />
   </component>
 </project>
