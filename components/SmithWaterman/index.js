@@ -54,15 +54,31 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
   };
 
   const tracebackAlignment = (matrix, sequenceA, sequenceB) => {
-    let i = matrix.length - 1;
-    let j = matrix[0].length - 1;
+    const numRows = matrix.length;
+    const numCols = matrix[0].length;
+    let maxScore = -Infinity;
+    let maxI = 0;
+    let maxJ = 0;
+  
+    for (let i = 0; i < numRows; i++) {
+      for (let j = 0; j < numCols; j++) {
+        if (matrix[i][j].score > maxScore) {
+          maxScore = matrix[i][j].score;
+          maxI = i;
+          maxJ = j;
+        }
+      }
+    }
+  
+    let i = maxI;
+    let j = maxJ;
     let alignedSequenceA = "";
     let alignedSequenceB = "";
-
-    while (i > 0 && j > 0) {
+  
+    while (i > 0 && j > 0 && matrix[i][j].score > 0) {
       const currentCell = matrix[i][j];
       const currentArrow = currentCell.arrow[0];
-
+  
       if (currentArrow === "diagonal") {
         alignedSequenceA = sequenceA[i - 1] + alignedSequenceA;
         alignedSequenceB = sequenceB[j - 1] + alignedSequenceB;
@@ -78,21 +94,10 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
         i--;
       }
     }
-
-    while (i > 0) {
-      alignedSequenceA = sequenceA[i - 1] + alignedSequenceA;
-      alignedSequenceB = "-" + alignedSequenceB;
-      i--;
-    }
-
-    while (j > 0) {
-      alignedSequenceA = "-" + alignedSequenceA;
-      alignedSequenceB = sequenceB[j - 1] + alignedSequenceB;
-      j--;
-    }
-
+  
     return { alignedSequenceA, alignedSequenceB };
   };
+  
 
   const runAlgorithmStep = (initialMatrix) => {
     const newMatrix = [...initialMatrix];
