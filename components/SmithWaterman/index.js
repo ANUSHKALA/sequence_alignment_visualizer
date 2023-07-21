@@ -174,6 +174,24 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
     return <div className="flex flex-row">{...alignChar}</div>;
   };
 
+  const calculateScore = (seqA, seqB) => {
+    const m = seqA.length;
+    const n = seqB.length;
+    var score = 0;
+    for (let i = 0; i < m; i++) {
+      const isSame = seqA[i] === seqB[i];
+      if (isSame) {
+        score += MATCH_SCORE;
+      } else if( seqA[i] === "-" || seqB[i] === "-"){
+        score += GAP_PENALTY;
+      }
+      else {
+        score += MISMATCH_SCORE;
+      }
+    }
+    return score;
+  };
+
   return (
     <div>
       {matrix.length > 0 && (
@@ -186,8 +204,17 @@ export default function SmithWaterman({ sequenceA, sequenceB, config }) {
         </div>
       )}
       <div className="flex justify-center mt-16 text-lg invert">
-        <div className="flex justify-center items-center p-5">
+        <div className="flex justify-center items-center p-5 flex-col">
           <h3 className="">Sequence Comparison</h3>
+          <div className="m-2 p-2 border border-black rounded-sm">
+            <div className="text-2xl">
+              <span className="text-xl font-medium">Score: </span>{" "}
+              {calculateScore(
+                comparisonSeq.alignedSequenceA,
+                comparisonSeq.alignedSequenceB
+              )}
+            </div>
+          </div>
         </div>
         <div className="p-5 uppercase border border-black border-l-4 border-r-0 border-t-0 border-b-0">
           {seqAlign(
